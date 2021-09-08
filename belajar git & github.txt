@@ -1,0 +1,124 @@
+1. GIT & GITHUB 
+Git dan github adalah komponen berbeda, kalian bisa saja mengerjakan dengan git tanpa adanya github atau sebalinya kalian bisa menggunakan github tanpa menginstal git, bisa benar" terpisah atau bisa digabungkan.
+
+---GIT---
+Git merupakan salah satu dari VCS(Version Control System), VSC disebut juga revision control system atau source code management adalah Sistem yang mengelola perubahan dari sebuah dokumen, program komputer, website dan kumpulan informasi lain(source code). GIT adalah sebuah VCS terdisribusi untuk mengelola perubahan file di dalam folder, folder didalam git disebut (repository/repo). selanjutnya GIT akan menyimpan riwayat perubahan  file disimpan menggunakan serangkaian "commint", nanti jika kita bekerja dengan GIT tidak save saja namun harus commit juga agar terlihat riwayat snapshot/rekaman perbuahannya
+
+--- definisi lain dari Version Control System---
+1. Sebuah Sistem yang menyimpan rekaman/snapshot perubahan pada source code === tidak terjadi copy paste lagii xixixi
+2. memungkinkan bekerja berkolaborasi dengan lebih baik. === mana yang berubah, mana yang nambah barisnya:v
+3. mengetahuii siapa yang melakukan dan kapan sebuah perubahahn terjadi.
+4. Memungkinkan kita untuk kembali ke keadaan sebelum perubahan(checkout)=== misal ada beberapa perubahan dan perubahan tersebut tidak tepat merasa tidak cocok perubahan dilakukan, Saya pengen balik lagi ke fitur sebelumnya nihh, menggunakan teknik checkout.
+ada banyak VSC yaitu, GIT, SUBversion, mercurial, CVS(Concurrent Versions System)
+
+----Kenapa Menggunakan VSC?---
+Karena ada masalah/problem, banyak ada revisi/version(melacak versi atau perubahan) ini menggunakan masih manula tidak menggunakn VSC dilakuikan dengan baik , kita kesulitan membuat versi untu file kita, problem berikutnya adalah jika kita membuat source code bersama tim, pasti akan merepotkan jika digabungkan file tersebut maka dari itu VSC bisa membantunya(kolaborasi). 
+
+----Recap/rekapan----
+1. Version Control System = Sistem yang menyimpan & mengelola rekaman perubahan dari source code
+2. GIT = salah satu software  yang bisa melakukan VCS
+3. GitHub = Website/layanan untuk mengelola Project GIT
+
+--- Istilah Git-----
+1.Repo = Folder project kita
+2.commit= rekaman/ snapshot dari repo kita
+3.hash = penanda unik pada sebuah commit, setiap commit pasti da kode uninya angka 20
+4.Branch = Cabang bebas dari sebuah commit
+5.Merge = Menggabungkan Branch 2 atau lebih
+6.remote = sumber yang memiliki repo, kalian bisa menggunakan github, git sebagai remote
+7. clone = mengambil repo dari remote(local ke computer) 
+8.push = mengirimkan commit ke repo(ngirim file dari local dibawa ke repo kita)
+9.pull = Mengambil commit dari repo atau update repo-nya
+
+Pertemuan 2--------------------------------------------------------------------------------------------------------------------------
+----Bekerja dengan GitHub------
+1. latihan membuat branch lokal dan merge dilokal 
+2. mempelajari merge dan branch
+3. insights ==> network = untuk melihat grapik main dan branch
+4. tanda titik titik artinya bahwa itu menandakan sudah commit
+
+
+pertemuan 3---------------------------------------------------------------------------------------------------------------------------
+-- Branch/cabang---
+Branch main adalah jalur utama
+---Teknik branching---
+1. membuat Git Branch 
+2. membuat snapshot tanpa menggangu jalur utama(main/master branch)
+3. Fitur Experimental, Jika kita mencoba-coba tidak menganggu jalur utamanya(main branch) jika gagal hapus saja branchnya:v
+4. 2 orang mengerjakan repo yang sama, membuat 2 branch lalu disatukan 
+
+---Merge/Mergeing---
+-menggabungkan 2 buah branch, dari branch kita mau minta ijin ke branch main
+-jika( Able to merge) artinya tidak conflik branch akan mengabungkan secara otomatis
+-Create pull request artinya branch kita meminta ijin dulu ke kebranch utama atau branch ini merequst ke branch utamanya menarik permintaannya, pasti bakal mengubah repo orang pasti harus konfirmasi dulu yang punya repo tersebut.
+-jika ( Cant auto Merge) artinya ada conflik, harus menangani secara manual sebagai main/master harus memperhatian file yang conflik(ada file sama tapi diubah atau dikerjakan oleh secara bersamaan pastinya kedua" nya beda itu hehehe) jika sudah bisa langsung dimerge saja  
+- jika muncul conflik harus diselesaikan oleh yang punya repo, jika file diganti bersmaan akan konflik.
+
+----Recap/rekapan---
+- Pull Request = meminta pemilik repo untuk'mengambil perubahan yang telah dilakukan. 
+- Merge = menggabungkan 2 branch 
+- Merge Conflik = baris yang sama dibuah oleh branch yang berbeda.
+
+---Checkout---
+berpindah ke branch/ ke commit yang lain
+
+Pertemuan 4 --------------------------------------------------------------------------------------------------------------------------
+---- Fork / Forking -----
+- Membuat 'copy/ duplikat' dari repo orang lain(berserta histor-nya)
+- Jembatan antara repo original dan duplikatnya
+- Modifikasi terhadap repo original 
+- Berkontribusi pada repo orang lain
+- Fork! = clone ialah berfungsi untuk menduplikate repo ke file local/ komputer kita 
+
+Pertemuan 5 ----------------------------------------------------------------------------------------------------------------------
+------- Bekerja Dengan GIT-------
+Menggunakan Console (CLI)
+Menggunakan Git Client(GUI) tidak disarankan, jika betapa susah menggunakan console(CLI) biar lebih mudah digunakan:v.
+ 
+Jika di OS windows Git Bash(Console) dan Git GUI(GUI), jika isntalll git maka command promd kita memiliki kemampuan seperti Git Bash:v
+
+--- Git Command ---
+
+1. $ git init = untuk menginsialisasi repo git dikomputer kita.
+2. $ git add <file(s)> = membuat file kedalam sesuatu yang disebut 'stagging area'
+3. $ git status = untuk mengetahui repo kita, ada file baru tidak, ada file berubah tidak, ada file yang hilang tidak
+4. $ git commit = untuk commit
+5. $ git config = untuk memasukin konfigurasi kedalam git-nya
+6. $ git branch = untuk membuat branch
+7. $ git help = pingin tahu cara melakukan perintah dengan cepat gunakan git help
+8. $ git log = menampil data yang sudah dicommit/ history commit
+
+
+--- langkah awal ---
+git init
+git status
+git add . atau nama filenya (ke stagging area)
+git commit -m(message) "..."
+U = untranck(belum dibawa ke stagging area)
+M= Modyfier(file berubah)
+
+
+--- 3 Area pada repo git, jika sudah membuat repo  ----
+1. Working tree adalah folder tempat kalian untuk bekerjanya, seperti melakukan project biasa saja folder yang di file project-projectnya
+2. Stagging area = memberi tahu git bahwa kita melakukan perubahan pada git, apakah perubahan ini sudah dijadikan commit atau tidak itu area ketiga yang jalan yaitu 
+3. History 
+
+--cara menggunakan git checkout & git log---
+--git log--
+1. $ git log = melihat history yang dicommit
+2. $ git log -- index.html(nama file yang dimofif/dicommit) = mempermudah kita mencari file yang mau dipulihkan/restore, pasti nanti banyak history commit jika banyak nanti dikerjakan ehhe
+
+--git checkout--
+1. git log -- index.html ( liat kode hashnya)
+2. $ git checkout bff85 --index.html(nama file yang akan dikembalikan)
+3. git add .
+4. git commit -m'deskripsi njing"
+
+Kendala yang saya hadapi ialah, git checkout (5 digit dari depan kode unik/hash) -- style.css(nama file yang mau dikembalikan)
+fungsi checkout mengembalikan file sebelumnya yang ada di perintah git log untuk memunculkan history yang sudah pernah dicommit.
+
+Pertemuan 6 -------------------------------------------------------------------------------------------------------------------------
+--- Git Branch & Merge ----
+
+
+
